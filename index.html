@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkincarePage</title>
+    <link rel="stylesheet" href="Skincare.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Hamburger Menu -->
+        <div class="menu-container">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div id="menu" class="menu">
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">Sale</a>
+
+                <a href="#">Reviews</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome To Our Online Shop</h1>
+        <P>
+        <H3>your Go-To Place For High-Quality</H3>
+        </P>
+        <P>
+        <h5>
+            "Locally-Made Products That Care For Your Face, Body, And Hair , giving you the care
+            you deserve."
+        </h5>
+        </P>
+
+        <div class="category-icons">
+            <a href="javascript:void(0);" id="category1" onclick="showProducts('category1')">
+                <img src="https://cdn.shopify.com/s/files/1/0377/4460/7277/files/2-about.jpg?v=1687443511"
+                    alt="Category 1" />
+                <p>Dermactive</p>
+            </a>
+            <a href="javascript:void(0);" id="category2" onclick="showProducts('category2')">
+                <img src="https://media.getshopx.shop/images/evacosmetics/products/nAmEnXP47VxbLqIU39uK2SPJuZwfOCz4DhcvbX15.webp"
+                    alt="Category 2" />
+                <p>eva cosmetics</p>
+            </a>
+            <a href="javascript:void(0);" id="category3" onclick="showProducts('category3')">
+                <img src="https://eparkville.com/cdn/shop/files/website-banner.png?v=1730383436&width=1200"
+                    alt="Category 3" />
+                <p>Seropipe</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop">
+        <h5>Discover Our Products</h5>
+        <div class="products-container">
+            <!-- Product 1 -->
+            <div class="product" data-sale="false">
+                <img src="https://eg.feel22.com/cdn/shop/files/feel22packshot-2024-05-14T140940.200.png?v=1715684988&width=900"
+                    alt="Product 1">
+                <h3>DA Acti-Repair Emollient Extreme 200ml</h3>
+                <p>LE 259</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <!-- Product 2 -->
+            <div class="product" data-sale="false">
+                <img src="https://www.eg.sohaticare.com/cdn/shop/files/ACTI-REPAIRCICACream_900x.jpg?v=1692703299"
+                    alt="Product 2">
+                <h3>ACTI-REPAIR CICA Cream</h3>
+                <p>LE 159</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <!-- Product 3 -->
+            <div class="product" data-sale="false">
+                <img src="https://www.eg.sohaticare.com/cdn/shop/files/6223013970335_900x.jpg?v=1712058915"
+                    alt="Product 3">
+                <h3>Acti-Repair Soothing Cleansing Gel</h3>
+                <p>LE 179</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <!-- More Products -->
+            <div class="product" data-sale="false">
+                <img src="https://www.eg.sohaticare.com/cdn/shop/files/ACTI-WHITEDepigmentingCream_900x.jpg?v=1692703520"
+                    alt="Product 4">
+                <h3>ACTI-WHITE Depigmenting Cream 50ml</h3>
+                <p>LE 209</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+
+
+            <div class="product" data-sale="false">
+                <img src="https://www.elegantstore-eg.com/wp-content/uploads/2024/01/Eva-body-lotion--768x768.png"
+                    alt="Product 8">
+                <h3>EVA SKIN CARE BODY LOTION – 240 ML</h3>
+                <p>LE 110 </p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <div class="product" data-sale="false">
+                <img src="https://www.elegantstore-eg.com/wp-content/uploads/2023/05/IMG_0804.jpeg" alt="Product 9">
+                <h3>Eva passion hand scrub – 60ML</h3>
+                <p>LE 75</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <div class="product" data-sale="false">
+                <img src="https://media.getshopx.shop/images/evacosmetics/products/LxBqGT972UxV5tQlqZynO4cMaKkwfcIByV5epoXJ.webp"
+                    alt="Product 10">
+                <h3>Eva Sun & Sea Tanning Oil Spray SPF 15 - 200 ml
+                </h3>
+                <p>LE 200</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+
+            <div class="product" data-sale="false">
+                <img src="https://www.elegantstore-eg.com/wp-content/uploads/2023/12/gdSEfzULWXEgK6EUIiHjVevXn4FAWwwGRO8HCBTK.jpg"
+                    alt="Product 12">
+                <h3>EVA SKIN CARE SENSES BODY SPLASH – COZY DREAM 240 ML</h3>
+                <p>LE 195</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+
+            <div class="product" data-sale="false">
+                <img src="https://www.elegantstore-eg.com/wp-content/uploads/2024/08/IMG_2415.webp" alt="Product 14">
+                <h3>EVA SKIN CARE SENSES BODY SPLASH NIGHT OUT- 240 ML</h3>
+                <p>LE 195</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <div class="product" data-sale="false">
+                <img src="https://cdn.shopify.com/s/files/1/0601/7453/2856/products/Seropipe-Intense-Nutrition-Hair-Shampoo-300ml-_1_26b466af-b2d3-41c6-9322-861764e11004_580x.png?v=1677752362%22"
+                    alt="Product 15">
+                <h3>Seropipe Intense Nutrition Hair Shampoo 300 ml</h3>
+                <p>LE 210</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <div class="product" data-sale="false">
+                <img src="https://www.eg.sohaticare.com/cdn/shop/products/Seropipe-Hair-Mask-300ml-pack-_1_2c59e710-bf1e-417f-87c2-321583a40c19_900x.png?v=1677752355"
+                    alt="Product 16">
+                <h3>SEROPIPE Hair Mask - 300 ML</h3>
+                <p>LE 255</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <div class="product" data-sale="false">
+                <img src="https://www.eg.sohaticare.com/cdn/shop/products/parkville-seropipe-hair-serum-img_900x.png?v=1677752358"
+                    alt="Product 17">
+                <h3>Seropipe Hair Serum 100 ml</h3>
+                <p>LE 255</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+
+            <div class="product" data-sale="false">
+                <img src="https://www.eg.sohaticare.com/cdn/shop/products/Seropipe-Hair-Growth-Accelerator-Spray-200ml-_1_ea8c68c9-fcb6-4c6e-91cd-7f606e9dd8a5_900x.png?v=1677752352"
+                    alt="Product 19">
+                <h3>SEROPIPE Hair Growth Accelerator Spray - 200 ML</h3>
+                <p>LE 195</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <div class="product" data-sale="false">
+                <img src="https://www.eg.sohaticare.com/cdn/shop/products/Seropipe-Droppper-_1_66fa75f6-eee7-4550-85df-7f5b5e5b2b88_900x.png?v=1677752347"
+                    alt="Product 20">
+                <h3>Seropipe Hair Dropper 5 ml vials</h3>
+                <p>LE 400</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sale Section -->
+    <section id="sale">
+        <h5>Exclusive Discounts Just for You!</h5>
+        <div class="products-container">
+            <!-- Sale Product 1 -->
+            <div class="product" data-sale="true">
+                <img src="https://alzad-cosmetics.com/wp-content/uploads/2024/06/sero.jpg" alt="Product 1">
+                <h3>Seropipe Set</h3>
+                <p><span class="original-price">LE 700</span>LE 650</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <!-- Sale Product 2 -->
+            <div class="product" data-sale="true">
+                <img src="https://media.getshopx.shop/images/evacosmetics/products/BwcziJt20a47XrOjeZiShf1wdot9TDQYkmsEvuvY.webp"
+                    alt="Product 2">
+                <h3>Eva skin care lip Kit - sweet cherry</h3>
+                <p><span class="original-price">LE 140</span> LE 119</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <!-- Sale Product 3 -->
+            <div class="product" data-sale="true">
+                <img src="https://media.getshopx.shop/images/evacosmetics/products/MagwfU4jvb5moqxvW2VkNQWaYP5pCwySbn8136mG.webp"
+                    alt="Product 3">
+                <h3>Eva Care Mystic Orchid Kit</h3>
+                <p><span class="original-price">LE 360</span>LE 306</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <!-- Sale Product 4 -->
+            <div class="product" data-sale="true">
+                <img src="https://media.getshopx.shop/images/evacosmetics/products/bpSrRwJJvfGJYCPM14qazGbvq91FULsONqQFdGXD.webp"
+                    alt="Product 4">
+                <h3>Gold argan Sun protection hair styling kit</h3>
+                <p><span class="original-price">LE 500</span>LE 425</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <!-- Sale Product 5 -->
+            <div class="product" data-sale="true">
+                <img src="https://menashopeg.com/wp-content/uploads/2024/10/1-30.webp" alt="Product 5">
+                <h3>ACTI-CLEAR Global AC Cream 50 ML</h3>
+                <p><span class="original-price">LE 240</span>LE 200</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <!-- Sale Product 6 -->
+            <div class="product" data-sale="true">
+                <img src="https://anwar.store/cdn/shop/files/888888888888888888888885_1024x1024.png?v=1688916526"
+                    alt="Product 6">
+                <h3>TRICHO-ACT Anti-Hair loss Shampoo 200 ML</h3>
+                <p><span class="original-price">LE 200</span>LE 180</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+            <!-- Sale Product 7 -->
+            <div class="product" data-sale="true">
+                <img src="https://i0.wp.com/taypharmacies.com/wp-content/uploads/2023/01/135248-scaled.jpg?fit=2560%2C2560&ssl=1"
+                    alt="Product 7">
+                <h3>SEROPIPE HAIR SH 300ML+HAIR SPRAY200ML</h3>
+                <p><span class="original-price">LE 425</span>LE 320</p>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                <p id="message" style="display: none; color: rgb(121, 80, 160);">Item added to cart</p>
+            </div>
+
+            <!-- Customer Reviews Section -->
+            <section id="reviews">
+                <h2>Customer Reviews</h2>
+                <div class="reviews-container">
+                    <div class="review">
+                        <p class="review-text">"I absolutely love the products! They are high quality and affordable."
+                        </p>
+                        <p class="customer-name">Rawan</p>
+                    </div>
+                    <div class="review">
+                        <p class="review-text">"Fast delivery and excellent customer service. Highly recommend!"</p>
+                        <p class="customer-name">Alaa</p>
+                    </div>
+                    <div class="review">
+                        <p class="review-text">"Great shopping experience! Will definitely buy again."</p>
+                        <p class="customer-name">Nour</p>
+                    </div>
+                    <div class="review">
+                        <p class="review-text">"I absolutely love this product! It's exactly what I was looking for and
+                            exceeded my expectations."</p>
+                        <p class="customer-name">Hager</p>
+                    </div>
+                    <div class="review">
+                        <p class="review-text">"Great quality and fast shipping. Will definitely purchase again!"</p>
+                        <p class="customer-name">Sidra</p>
+                    </div>
+
+
+
+                </div>
+        </div>
+    </section>
+
+
+
+    </div>
+    </section>
+
+    </div>
+    </section>
+    <script src="Skincare.js"></script>
+</body>
+
+</html>

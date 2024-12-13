@@ -1,0 +1,304 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+/* Header Section */
+header {
+    background-color: #507ca9;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+}
+
+/*header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+}*/
+
+/*header nav a:hover {
+    background-color: #86728B;
+    border-radius: 5px;
+}*/
+
+/*header #viewCartBtn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px 15px;
+    background-color: #86728B !important;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}*/
+
+
+/* Home Section */
+#home {
+    background-color: whitesmoke;
+    padding: 50px;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 36px;
+    color: #011023;
+}
+
+#home h3 {
+    color: #011023;
+}
+
+#home p {
+    font-size: 18px;
+    color: #011023;
+}
+
+.category-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.category-icons a {
+    margin: 0 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+}
+
+.category-icons a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.category-icons a:hover img {
+    transform: scale(1.1);
+}
+
+.category-icons a p {
+    font-size: 16px;
+}
+
+/* Shop and Sale Section */
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h5 {
+    font-size: 28px;
+    text-align: center;
+    color: #011023;
+}
+
+/* Products Container */
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product {
+    background-color: rgb(244, 242, 242);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 50px;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product img {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 18px;
+    color: #042558;
+    margin-top: 15px;
+}
+
+.product p {
+    font-size: 16px;
+    color: #011023;
+    margin-top: 10px;
+}
+
+.product button {
+    padding: 10px;
+    background-color: #1A2D42;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background-color: #2E4156;
+}
+
+/* Sale Product Styles */
+.product[data-sale="true"] {
+    border: none;
+}
+
+.product[data-sale="true"] .original-price {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Product Hover Effect */
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .products-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+    }
+}
+
+/* Customer Reviews Section */
+#reviews {
+    padding: 50px;
+    background-color: #e9eef1;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 50%;
+}
+
+#reviews h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.review {
+    background-color: #dee3ea;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.review-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.customer-name {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hover Effect for Review */
+.review:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .reviews-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review {
+        width: 90%;
+    }
+}
+
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #011023;
+}
+
+.hamburger:hover {
+    color: #c2e8ff;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #507ca9;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    border-radius: 9px;
+    overflow: hidden;
+
+
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-20px);
+    /* Start position for the slide effect */
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.menu.show {
+
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    /* Move to original position */
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s, padding 0.3s;
+    border-bottom: 1px solid #2E4156;
+}
+
+.menu a:hover {
+    background-color: #789fce;
+    transform: translateX(10px);
+    /* Shift link slightly to the right */
+    transition: transform 0.3s ease;
+    /* Smooth movement for hover effect */
+}
